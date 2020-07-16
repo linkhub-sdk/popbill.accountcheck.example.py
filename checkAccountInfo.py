@@ -16,6 +16,7 @@ from popbill import AccountCheckService, PopbillException
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
+accountCheckService.UseStaticIP = testValue.UseStaticIP
 
 '''
 예금주정보 1건을 조회합니다.
@@ -29,7 +30,7 @@ try:
     bankCode = "0004"
 
     # 조회할 계좌번호
-    accountNumber = "94324511758"
+    accountNumber = "9432451175851"
 
     accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber)
 

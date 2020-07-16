@@ -16,6 +16,7 @@ from popbill import AccountCheckService, PopbillException
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
+accountCheckService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌에 로그인 상태로 접근할 수 있는 팝업 URL을 반환합니다.

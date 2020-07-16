@@ -16,6 +16,7 @@ from popbill import AccountCheckService, PopbillException
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
+accountCheckService.UseStaticIP = testValue.UseStaticIP
 
 try:
     print("=" * 15 + " 회사정보 수정 " + "=" * 15)

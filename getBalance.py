@@ -16,6 +16,7 @@ from popbill import AccountCheckService, PopbillException
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
+accountCheckService.UseStaticIP = testValue.UseStaticIP
 
 '''
 연동회원의 잔여포인트를 확인합니다.

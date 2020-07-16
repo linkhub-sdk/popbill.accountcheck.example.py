@@ -16,6 +16,7 @@ from popbill import AccountCheckService, PopbillException
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
+accountCheckService.UseStaticIP = testValue.UseStaticIP
 
 '''
 파트너 포인트충전 팝업 URL을 반환합니다.
