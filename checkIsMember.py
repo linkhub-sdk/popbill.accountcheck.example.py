@@ -17,6 +17,7 @@ accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
+accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.

@@ -17,6 +17,7 @@ accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
+accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 try:
     print("=" * 15 + " 담당자 등록 " + "=" * 15)

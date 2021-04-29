@@ -17,6 +17,7 @@ accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest
 accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
+accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌 연동회원 포인트 충전 URL을 반환합니다.
