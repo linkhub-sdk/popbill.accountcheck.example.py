@@ -49,8 +49,8 @@ try:
         # 담당자 메일주소 (최대 100자)
         email="test@test.com",
 
-        # 회사조회 권한여부, True(회사조회) False(개인조회)
-        searchAllAllowYN=True,
+        ##담당자 조회권한, 1(개인) 2(읽기) 3(회사)
+        searchRole=1,
 
         # 관리자 권한여부, True(관리자), False(사용자)
         mgrYN=True
