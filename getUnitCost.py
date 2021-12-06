@@ -29,7 +29,13 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    unitCost = accountCheckService.getUnitCost(CorpNum)
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
+    # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+    serviceType = "실명"
+
+    unitCost = accountCheckService.getUnitCost(CorpNum, UserID, serviceType)
 
     print("조회 단가 : %f" % unitCost)
 except PopbillException as PE:

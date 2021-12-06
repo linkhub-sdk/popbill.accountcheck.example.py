@@ -20,20 +20,24 @@ accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-예금주정보 1건을 조회합니다.
+예금주성명 1건을 조회합니다.
 '''
 
 try:
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호 ('-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 조회할 계좌 기관코드
+    # - https://docs.popbill.com/accountcheck/?lang=python#BankCodeList
     bankCode = "0004"
 
-    # 조회할 계좌번호
+    # 조회할 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
     accountNumber = "9432451175851"
 
-    accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber)
+    # 팝빌 회원 아이디
+    userId = "testkorea"
+
+    accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber, userId)
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 
