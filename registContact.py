@@ -19,10 +19,15 @@ accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
+"""
+연동회원의 담당자를 신규로 등록합니다.
+- https://docs.popbill.com/accountcheck/python/api#RegistContact
+"""
+
 try:
     print("=" * 15 + " 담당자 등록 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 팝빌회원 아이디

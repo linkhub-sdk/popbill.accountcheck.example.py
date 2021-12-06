@@ -21,10 +21,11 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 예금주성명 1건을 조회합니다.
+- https://docs.popbill.com/accountcheck/python/api#CheckAccountInfo
 '''
 
 try:
-    # 팝빌회원 사업자번호 ('-' 제외 10자리)
+    # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 조회할 계좌 기관코드

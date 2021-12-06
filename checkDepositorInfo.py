@@ -21,6 +21,7 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 예금주실명 1건을 조회합니다.
+- https://docs.popbill.com/accountcheck/python/api#CheckDepositorInfo
 '''
 
 try:

@@ -21,12 +21,13 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+- https://docs.popbill.com/accountcheck/python/api#CheckIsMember
 '''
 
 try:
     print("=" * 15 + " 연동회원 가입여부 확인 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
     result = accountCheckService.checkIsMember(CorpNum)
