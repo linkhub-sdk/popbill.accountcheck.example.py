@@ -26,14 +26,14 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 try:
     print("=" * 15 + " 예금주조회 단가 확인 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
     # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
-    serviceType = "실명"
+    serviceType = "성명"
 
     unitCost = accountCheckService.getUnitCost(CorpNum, UserID, serviceType)
 

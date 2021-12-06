@@ -35,7 +35,7 @@ try:
     accountNumber = "9432451175851"
 
     # 팝빌 회원 아이디
-    userId = "testkorea"
+    userId = testValue.testUserID
 
     accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber, userId)
 

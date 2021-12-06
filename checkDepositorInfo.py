@@ -43,7 +43,7 @@ try:
     identityNum ="900101"
 
     # 팝빌 회원 아이디
-    userId = "testkorea"
+    userId = testValue.testUserID
 
     depositorInfo = accountCheckService.checkDepositorInfo(CorpNum, bankCode, accountNumber, identityNumType, identityNum, userId)
 
