@@ -56,7 +56,7 @@ try:
     print("identityNumType (등록번호 유형) : %s " % depositorInfo.identityNumType )
     print("identityNum (등록번호) : %s " % depositorInfo.identityNum )
     print("checkDate (확인일시) : %s " % depositorInfo.checkDate)
-    print("resultCode (응답코드) : %s " % depositorInfo.resultCode)
+    print("result (응답코드) : %s " % depositorInfo.resultCode)
     print("resultMessage (응답메시지) : %s " % depositorInfo.resultMessage)
 
 except PopbillException as PE:
