@@ -20,7 +20,7 @@ accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-연동회원의 예금주조회 API 서비스 과금정보를 확인합니다.
+예금주조회 API 서비스 과금정보를 확인합니다.
 - https://docs.popbill.com/accountcheck/python/api#GetChargeInfo
 '''
 
@@ -33,7 +33,7 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+    # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명
     serviceType = "성명"
 
     response = accountCheckService.getChargeInfo(CorpNum, UserID, serviceType)

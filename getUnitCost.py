@@ -33,7 +33,7 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명 	
+    # 서비스 유형, 계좌성명조회 - 성명 , 계좌실명조회 - 실명
     serviceType = "성명"
 
     unitCost = accountCheckService.getUnitCost(CorpNum, UserID, serviceType)
