@@ -43,10 +43,7 @@ try:
     # - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
     identityNum =""
 
-    # 팝빌 회원 아이디
-    userId = testValue.testUserID
-
-    depositorInfo = accountCheckService.checkDepositorInfo(CorpNum, bankCode, accountNumber, identityNumType, identityNum, userId)
+    depositorInfo = accountCheckService.checkDepositorInfo(CorpNum, bankCode, accountNumber, identityNumType, identityNum)
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 

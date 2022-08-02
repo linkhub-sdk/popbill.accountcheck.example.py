@@ -30,10 +30,7 @@ try:
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    response = accountCheckService.listContact(CorpNum, UserID)
+    response = accountCheckService.listContact(CorpNum)
 
     for info in response:
         print("id (아이디) : %s" % info.id)

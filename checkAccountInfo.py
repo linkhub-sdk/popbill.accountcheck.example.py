@@ -35,10 +35,7 @@ try:
     # 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
     accountNumber = ""
 
-    # 팝빌 회원 아이디
-    userId = testValue.testUserID
-
-    accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber, userId)
+    accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber)
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 

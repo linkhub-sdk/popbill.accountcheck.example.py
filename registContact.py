@@ -30,9 +30,6 @@ try:
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 담당자 정보
     newContact = ContactInfo(
 
@@ -56,7 +53,7 @@ try:
         searchRole=1
     )
 
-    result = accountCheckService.registContact(CorpNum, newContact, UserID)
+    result = accountCheckService.registContact(CorpNum, newContact)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 except PopbillException as PE:
