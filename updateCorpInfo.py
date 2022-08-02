@@ -11,7 +11,7 @@ except Exception as E:
 
 import testValue
 
-from popbill import AccountCheckService, PopbillException
+from popbill import CorpInfo, AccountCheckService, PopbillException
 
 accountCheckService = AccountCheckService(testValue.LinkID, testValue.SecretKey)
 accountCheckService.IsTest = testValue.IsTest

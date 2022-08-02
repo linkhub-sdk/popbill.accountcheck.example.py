@@ -30,6 +30,9 @@ try:
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
 
+    # 담당자 아이디
+    contactID = "testkorea"
+
     contactInfo = accountCheckService.getContactInfo(CorpNum, contactID)
 
     print("id (아이디) : %s " % contactInfo.id)
