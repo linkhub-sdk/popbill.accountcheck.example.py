@@ -29,7 +29,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 조회할 기관코드
-    # - https://docs.popbill.com/accountcheck/?lang=python#BankCodeList
+    # 조회 가능한 금융기관 : [https://docs.popbill.com/accountcheck/?lang=python#BankCodeList]
     bankCode = ""
 
     # 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)

@@ -29,7 +29,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 조회할 기관코드
-    # - https://docs.popbill.com/accountcheck/?lang=python#BankCodeList
+    # 조회 가능한 금융기관 : [https://docs.popbill.com/accountcheck/?lang=python#BankCodeList]
     bankCode = ""
 
     # 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
@@ -39,8 +39,9 @@ try:
     identityNumType = "P"
 
     # 등록번호
-    # - IdentityNumType 값이 "B" 인 경우 (하이픈 '-' 제외  사업자번호(10)자리 입력 )
-    # - IdentityNumType 값이 "P" 인 경우 (생년월일(6)자리 입력 (형식 : YYMMDD))
+    # └ 등록번호 유형 값이 "B"인 경우 사업자번호(10 자리) 입력
+    # └ 등록번호 유형 값이 "P"인 경우 생년월일(6 자리) 입력 (형식 : YYMMDD)
+    # 하이픈 '-' 제외하고 입력
     identityNum =""
 
     depositorInfo = accountCheckService.checkDepositorInfo(CorpNum, bankCode, accountNumber, identityNumType, identityNum)
