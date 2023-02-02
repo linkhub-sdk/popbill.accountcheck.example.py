@@ -21,7 +21,7 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 예금주조회 API 서비스 과금정보를 확인합니다.
-- https://docs.popbill.com/accountcheck/python/api#GetChargeInfo
+- https://developers.popbill.com/reference/accountcheck/python/api/point#GetChargeInfo
 '''
 
 try:

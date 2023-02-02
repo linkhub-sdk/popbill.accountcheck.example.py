@@ -21,7 +21,7 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 예금주조회 단가를 확인합니다.
-- https://docs.popbill.com/accountcheck/python/api#GetUnitCost
+- https://developers.popbill.com/reference/accountcheck/python/api/point#GetUnitCost
 '''
 
 try:

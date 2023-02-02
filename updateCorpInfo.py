@@ -21,7 +21,7 @@ accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 연동회원사의 회사정보를 수정 합니다.
-- https://docs.popbill.com/accountcheck/python/api#UpdateCorpInfo
+- https://developers.popbill.com/reference/accountcheck/python/api/member#UpdateCorpInfo
 """
 
 try:
