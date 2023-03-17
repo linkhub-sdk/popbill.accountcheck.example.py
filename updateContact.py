@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -35,21 +35,16 @@ try:
 
     # 담당자 정보
     updateInfo = ContactInfo(
-
         # 담당자 아이디
         id=UserID,
-
         # 담당자 성명 (최대 100자)
         personName="담당자_성명",
-
         # 담당자 연락처 (최대 20자)
         tel="",
-
         # 담당자 메일주소 (최대 100자)
         email="",
-
         ##담당자 조회권한, 1(개인) 2(읽기) 3(회사)
-        searchRole=1
+        searchRole=1,
     )
 
     result = accountCheckService.updateContact(CorpNum, updateInfo)

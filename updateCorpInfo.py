@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -32,21 +32,16 @@ try:
 
     # 회사정보
     corpInfo = CorpInfo(
-
         # 대표자 성명 (최대 100자)
         ceoname="대표자_성명",
-
         # 상호 (최대 200자)
         corpName="상호",
-
         # 주소 (최대 300자)
         addr="주소",
-
         # 업태 (최대 100자)
         bizType="업태",
-
         # 종목 (최대 100자)
-        bizClass="종목"
+        bizClass="종목",
     )
 
     result = accountCheckService.updateCorpInfo(CorpNum, corpInfo)

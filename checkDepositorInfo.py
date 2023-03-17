@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 1건의 예금주실명을 조회합니다.
 - https://developers.popbill.com/reference/accountcheck/python/api/check#CheckDepositorInfo
-'''
+"""
 
 try:
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
@@ -42,9 +42,11 @@ try:
     # └ 등록번호 유형 값이 "B"인 경우 사업자번호(10 자리) 입력
     # └ 등록번호 유형 값이 "P"인 경우 생년월일(6 자리) 입력 (형식 : YYMMDD)
     # 하이픈 '-' 제외하고 입력
-    identityNum =""
+    identityNum = ""
 
-    depositorInfo = accountCheckService.checkDepositorInfo(CorpNum, bankCode, accountNumber, identityNumType, identityNum)
+    depositorInfo = accountCheckService.checkDepositorInfo(
+        CorpNum, bankCode, accountNumber, identityNumType, identityNum
+    )
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 
@@ -53,8 +55,8 @@ try:
     print("accountName (예금주 성명) : %s " % depositorInfo.accountName)
     print("bankCode (기관코드) : %s " % depositorInfo.bankCode)
     print("accountNumber (계좌번호) : %s " % depositorInfo.accountNumber)
-    print("identityNumType (등록번호 유형) : %s " % depositorInfo.identityNumType )
-    print("identityNum (등록번호) : %s " % depositorInfo.identityNum )
+    print("identityNumType (등록번호 유형) : %s " % depositorInfo.identityNumType)
+    print("identityNum (등록번호) : %s " % depositorInfo.identityNum)
     print("checkDate (확인일시) : %s " % depositorInfo.checkDate)
 
 except PopbillException as PE:

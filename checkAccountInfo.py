@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 1건의 예금주성명을 조회합니다.
 - https://developers.popbill.com/reference/accountcheck/python/api/check#CheckAccountInfo
-'''
+"""
 
 try:
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)

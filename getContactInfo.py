@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ accountCheckService.IPRestrictOnOff = testValue.IPRestrictOnOff
 accountCheckService.UseStaticIP = testValue.UseStaticIP
 accountCheckService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 연동회원 사업자번호에 등록된 담당자(팝빌 로그인 계정) 정보를 확인합니다.
 - https://developers.popbill.com/reference/accountcheck/python/api/member#GetContactInfo
-'''
+"""
 
 try:
     print("=" * 15 + " 담당자 정보 확인 " + "=" * 15)
