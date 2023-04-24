@@ -32,9 +32,9 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    response = AccountCheckService.GetRefundableBalance(CorpNum, UserID)
+    refundableBalance = AccountCheckService.GetRefundableBalance(CorpNum, UserID)
 
-    print(" refundableBalance (환불 가능한 포인트) : %s" % response.refundableBalance)
+    print(" refundableBalance (환불 가능한 포인트) : %s" % refundableBalance)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
