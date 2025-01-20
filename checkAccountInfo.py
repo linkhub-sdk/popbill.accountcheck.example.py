@@ -31,7 +31,7 @@ try:
     # 조회 가능한 금융기관 : [https://developers.popbill.com/reference/accountcheck/python/api#available-agency]
     bankCode = ""
 
-    # 조회할 기관의 계좌번호 (하이픈 '-' 제외 8자리 이상 14자리 이하)
+    # 조회할 기관의 계좌번호 (하이픈 '-' 제외 7자리 이상 14자리 이하)
     accountNumber = ""
 
     accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber)
