@@ -4,6 +4,7 @@ import imp
 import sys
 
 imp.reload(sys)
+
 try:
     sys.setdefaultencoding("UTF8")
 except Exception as E:
@@ -28,22 +29,21 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 조회할 기관코드
-    # 조회 가능한 금융기관 : [https://developers.popbill.com/reference/accountcheck/python/api#available-agency]
     bankCode = ""
 
-    # 조회할 기관의 계좌번호 (하이픈 '-' 제외 7자리 이상 14자리 이하)
+    # 조회할 기관의 계좌번호
     accountNumber = ""
 
     accountInfo = accountCheckService.checkAccountInfo(CorpNum, bankCode, accountNumber)
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 
-    print("result (응답코드) : %s " % accountInfo.resultCode)
-    print("resultMessage (응답메시지) : %s " % accountInfo.resultMessage)
+    print("result (상태코드) : %s " % accountInfo.resultCode)
+    print("resultMessage (상태메시지) : %s " % accountInfo.resultMessage)
     print("accountName (예금주 성명) : %s " % accountInfo.accountName)
     print("bankCode (기관코드) : %s " % accountInfo.bankCode)
     print("accountNumber (계좌번호) : %s " % accountInfo.accountNumber)
-    print("checkDate (확인일시) : %s " % accountInfo.checkDate)
+    print("checkDT (확인일시) : %s " % accountInfo.checkDT)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

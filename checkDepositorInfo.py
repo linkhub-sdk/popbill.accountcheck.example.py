@@ -28,35 +28,32 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 조회할 기관코드
-    # 조회 가능한 금융기관 : [https://developers.popbill.com/reference/accountcheck/python/api#available-agency]
     bankCode = ""
 
-    # 조회할 기관의 계좌번호 (하이픈 '-' 제외 7자리 이상 14자리 이하)
+    # 조회할 기관의 계좌번호
     accountNumber = ""
 
-    # 등록번호 유형 ( P / B 중 택 1 ,  P = 개인, B = 사업자)
+    # 실명번호 유형 ( P / B 중 택 1 ,  P = 개인, B = 사업자)
     identityNumType = "P"
 
-    # 등록번호
-    # └ 등록번호 유형 값이 "B"인 경우 사업자번호(10 자리) 입력
-    # └ 등록번호 유형 값이 "P"인 경우 생년월일(6 자리) 입력 (형식 : YYMMDD)
-    # 하이픈 '-' 제외하고 입력
+    # 실명번호 (하이픈 '-' 제외하고 입력)
+    # └ 실명번호 유형 값이 "B"인 경우 사업자번호(10 자리) 입력
+    # └ 실명번호 유형 값이 "P"인 경우 생년월일(6 자리) 입력 (형식 : YYMMDD)
     identityNum = ""
 
-    depositorInfo = accountCheckService.checkDepositorInfo(
-        CorpNum, bankCode, accountNumber, identityNumType, identityNum
-    )
+    depositorInfo = accountCheckService.checkDepositorInfo( CorpNum, bankCode,
+        accountNumber, identityNumType, identityNum )
 
     print("=" * 15 + " 예금주조회 " + "=" * 15)
 
-    print("result (응답코드) : %s " % depositorInfo.resultCode)
-    print("resultMessage (응답메시지) : %s " % depositorInfo.resultMessage)
+    print("result (상태코드) : %s " % depositorInfo.resultCode)
+    print("resultMessage (상태메시지) : %s " % depositorInfo.resultMessage)
     print("accountName (예금주 성명) : %s " % depositorInfo.accountName)
     print("bankCode (기관코드) : %s " % depositorInfo.bankCode)
     print("accountNumber (계좌번호) : %s " % depositorInfo.accountNumber)
-    print("identityNumType (등록번호 유형) : %s " % depositorInfo.identityNumType)
-    print("identityNum (등록번호) : %s " % depositorInfo.identityNum)
-    print("checkDate (확인일시) : %s " % depositorInfo.checkDate)
+    print("identityNumType (실명번호 유형) : %s " % depositorInfo.identityNumType)
+    print("identityNum (실명번호) : %s " % depositorInfo.identityNum)
+    print("checkDT (확인일시) : %s " % depositorInfo.checkDT)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
